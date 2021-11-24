@@ -1,0 +1,15 @@
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.csproj.AssemblyReference.cache
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.GeneratedMSBuildEditorConfig.editorconfig
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.AssemblyInfoInputs.cache
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.AssemblyInfo.cs
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.csproj.CoreCompileInputs.cache
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/aracsorusu.deps.json
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/aracsorusu.runtimeconfig.json
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/aracsorusu.runtimeconfig.dev.json
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/aracsorusu.dll
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/ref/aracsorusu.dll
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/bin/Debug/net5.0/aracsorusu.pdb
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.dll
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/ref/aracsorusu.dll
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.pdb
+/Users/selinaslan/Projects/aracsorusu/aracsorusu/obj/Debug/net5.0/aracsorusu.genruntimeconfig.cache
