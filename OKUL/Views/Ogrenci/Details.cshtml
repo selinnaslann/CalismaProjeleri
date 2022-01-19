@@ -1,0 +1,58 @@
+﻿@model OKUL.Models.Ogrenci
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    string ogretmenAdSoyad = Model.Ogretmen.Ad +" "+Model.Ogretmen.Soyad;
+    string photoUrl = "../../../UploadedFiles/Ogrenci/" + Model.FotoAdres;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ogrenci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Fotoğraf")
+        </dt>
+
+        <dd>
+            <img src="@photoUrl" alt="@Model.Ad"  style="height:180px;width:140px;"/>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ogretmen)
+        </dt>
+
+        <dd>
+            @Html.ActionLink(linkText: ogretmenAdSoyad, actionName: "Details", controllerName: "Ogretmen", routeValues: new { id = Model.OgretmenID }, htmlAttributes: new { @class = "btn btn-warning" })
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID } ,new {@class="btn btn-success"})|
+    @Html.ActionLink("Back to List", "Index",new { }, new { @class = "btn btn-primary" })
+</p>
