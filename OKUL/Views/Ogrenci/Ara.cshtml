@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OKUL.Models.Ogrenci>
+
+@{
+    ViewBag.Title = "Ara";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Ara</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OgretmenID)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ad)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Soyad)
+    </td>
+    <td>
+        @Html.ActionLink(linkText:item.OgretmenID.ToString(), actionName:"Details",controllerName:"Ogretmen",routeValues:new { id=item.OgretmenID}, htmlAttributes: new { @class="btn btn-warning"})
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>

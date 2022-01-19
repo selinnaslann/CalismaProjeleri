@@ -1,0 +1,15 @@
+﻿
+@{
+    //Layout = "~/Views/Shared/_LayoutPage.cshtml";
+    //Layout = null;
+    ViewBag.Title = "Öğrenci Kaydet";
+}
+
+
+<p> Burası Öğrenci Kaydet sayfası</p>
+@{
+    <p>@ViewData["isim"]</p>
+    <p>@ViewBag.okul</p>
+    <p>@TempData["ogretmen"]</p>
+}
+<a href="/Ogrenci/Index">Git</a>
