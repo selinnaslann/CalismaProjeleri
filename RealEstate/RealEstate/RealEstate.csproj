@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -116,11 +119,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\AdvertCommercialController.cs" />
     <Compile Include="Controllers\AdvertLandController.cs" />
     <Compile Include="Controllers\AdvertResidentialController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DataAccess\AddressDAL.cs" />
+    <Compile Include="DataAccess\DbTools.cs" />
     <Compile Include="DataAccess\ResidentialDAL.cs" />
+    <Compile Include="DataAccess\UserDAL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,12 +136,16 @@
     <Compile Include="ModelBase\IAdvert.cs" />
     <Compile Include="ModelBase\IRealEstate.cs" />
     <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\AddressCity.cs" />
+    <Compile Include="Models\AddressCountry.cs" />
+    <Compile Include="Models\AddressTown.cs" />
     <Compile Include="Models\AdvertCommercial.cs" />
     <Compile Include="Models\AdvertLand.cs" />
     <Compile Include="Models\AdvertResidential.cs" />
     <Compile Include="Models\Commercial.cs" />
     <Compile Include="Models\Land.cs" />
     <Compile Include="Models\Residential.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -176,7 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Address\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

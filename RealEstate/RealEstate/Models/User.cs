@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using RealEstate.Models;
+using RealEstate.DataAccess;
 
 namespace RealEstate.Models
 {
@@ -14,7 +16,34 @@ namespace RealEstate.Models
         public string PhoneNumber { get; set; }
         public string ProfilePicUrl { get; set; }
         public HttpPostedFileBase ProfilePic { get; set; }
-        public Address address { get; set; }
+        private int _AddressID { get; set; }
+
+        public int AddressID {
+            get
+            {
+                return this._AddressID;
+            }
+            set
+            {
+                this._AddressID = value;
+                this.Address = DbTools.Connection.GetAddressByID(value);
+            }
+         }
+        public Address Address { get; set; }
+        private int _RoleID { get; set; }
+        public int RoleID
+        {
+            get
+            {
+                return this._RoleID;
+            }
+            set
+            {
+                this._RoleID = value;
+                this.Role = DbTools.Connection.GetRoleByID(value);
+            }
+        }
+        public Role Role { get; set; }
        
 
     }

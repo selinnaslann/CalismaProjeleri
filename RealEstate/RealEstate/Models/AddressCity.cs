@@ -5,13 +5,10 @@ using System.Web;
 
 namespace RealEstate.Models
 {
-    public class Address
+    public class AddressCity
     {
         public int ID { get; set; }
-        public int TownID { get; set; }
-        public string Details { get; set; }
-        public int CityID { get; set; }
+        public string Name { get; set; }
         public int CountryID { get; set; }
-
     }
 }

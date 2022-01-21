@@ -23,7 +23,7 @@ namespace RealEstate.DataAccess
         }
         public object Create(Residential residential)
         {
-            string query = $"INSERT INTO Residentials (SellType,Square,Age,FloorNumber) VALUES('{ogrenci.Ad}','{ogrenci.Soyad}',{ogrenci.OgretmenID},'{ogrenci.FotoAdres}'); SELECT CAST(scope_identity() AS int);";
+            string query = $"INSERT INTO Residentials (SellType,Square,Age,FloorNumber,Heating,Balcony,Furnished,AdressID,ResidentialType) VALUES('{residential.SellType}','{residential.Square}','{residential.Age}','{residential.FloorNumber}','{residential.Heating}','{residential.Balcony}','{residential.Furnished}','{residential.Address}','{residential.ResidentialType}'); SELECT CAST(scope_identity() AS int);";
             object insertedID = DbTools.Connection.Create(query);
             return insertedID;
         }
